@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int money = sc.nextInt();
+        int leftmoney = 1000 - money;
+        int cnt = 0;
+
+        int[] coins = {500, 100, 50, 10, 5, 1};
+
+        for(int coin : coins) {
+            if(leftmoney >= coin) {
+                cnt += leftmoney / coin;
+                leftmoney %= coin;
+            }
+        }
+
+        System.out.println(cnt);
+    }
+}
