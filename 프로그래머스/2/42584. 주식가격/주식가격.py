@@ -1,5 +1,8 @@
 def solution(prices):
     answer = []
+    time = []
+    cnt = 0
+
     
     for i in range(len(prices)):
         cnt = 0
@@ -8,4 +11,8 @@ def solution(prices):
             if prices[i] > prices[j]:
                 break
         answer.append(cnt)
+    
+    
+    
+    
     return answer
